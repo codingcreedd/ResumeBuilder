@@ -17,15 +17,19 @@ function Nav(){
     )
 }
 
-function Hero(){
+function Hero({callback}){
     return (
-        <div className="mt-32 w-full flex flex-col items-center gap-8 px-80">
-            <h1 className="text-6xl font-extrabold text-purple-600">Resume Builder #1 By Marwan</h1>
+        <div className="mt-32 w-full flex flex-col items-center gap-8 xl:px-80 px-40">
+            <h1 className="xl:text-6xl lg:text-4xl text-2xl font-extrabold text-purple-600">Resume Builder #1 By Marwan</h1>
             <p className="text-3xl flex flex-col items-center gap-2">
                 <span>Create a modern resume <u>seemlessly</u> that gets you ahead of <b> 95% of pepole </b> that are</span> <span>trying to get hired. Try out your resume build today!</span>
             </p>
             <button className="mt-8 px-8 py-4 cursor-pointer bg-purple-600 text-white font-bold rounded-xl
-            hover:bg-white hover:border hover:border-purple-600 hover:text-purple-600 transition-all">Build My Resume</button>
+            hover:bg-white hover:border hover:border-purple-600 hover:text-purple-600 transition-all"
+                onClick={() => {
+                    callback(false);
+                }}
+            >Build My Resume</button>
             <img src="/Professional-Elite-Resume-1-1.jpg" alt="TEMPLATE" 
             className="w-[70%] shadow-2xl mt-8"/>
         </div>
@@ -40,7 +44,7 @@ function Footer(){
     )
 }
 
-export default function Home(){
+export default function Home({callback}){
 
     const [position, setPosition] = useState({
         x: 0, y: 0
@@ -59,7 +63,7 @@ export default function Home(){
             ></div>
 
             <Nav />
-            <Hero />
+            <Hero callback={callback}/>
             <Footer />
         </div>
     )

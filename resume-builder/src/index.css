@@ -20,6 +20,20 @@ body {
   width: 100vw;
 }
 
+.bx.bxs-graduation{
+  font-size: 2rem;
+}
+
+.bx.bx-chevron-down{
+  font-size: 2rem;
+}
+
+@layer components{
+  .navBtn{
+    @apply px-4 py-2 shadow-xl border border-purple-600 rounded-lg hover:-translate-y-1 transition-all;
+  }
+}
+
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
