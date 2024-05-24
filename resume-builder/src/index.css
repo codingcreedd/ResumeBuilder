@@ -20,12 +20,15 @@ body {
   width: 100vw;
 }
 
+.bx.bx-chevron-down,
+.bx.bxs-briefcase,
 .bx.bxs-graduation{
   font-size: 2rem;
 }
 
-.bx.bx-chevron-down{
-  font-size: 2rem;
+.grid-container{
+  display: grid;
+  grid-template-columns: 40% 60%;
 }
 
 @layer components{
@@ -34,7 +37,3 @@ body {
   }
 }
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
