@@ -22,13 +22,17 @@ function App() {
   });
 
   const [experience, setExperience] = useState({
-    companyName: '', positionTitle: '', startDate: '', endDate: '', location: '', description: ''
+      companyName: '', positionTitle: '', startDate: '', endDate: '', location: '', description: ''
   });
 
-  // const [experience, setExperience] = useState([]); //array of objects
+  const [education, setEducation] = useState({
+    uni: 'Uni', degree: 'Degree', startDate: '2024', endDate: '2025', location: 'Tripoli, Lebanon'
+  }); //array of objects
+
+  const [download, setDownload] = useState(false);
 
   return (
-    <Context.Provider value={[styles, setStyles, personalInfo, setPersonalInfo, experience, setExperience]}>
+    <Context.Provider value={{styles, setStyles, personalInfo, setPersonalInfo, experience, setExperience, education, setEducation, download, setDownload}}>
         <div className='min-h-full App'>
             {
               onHome ? (

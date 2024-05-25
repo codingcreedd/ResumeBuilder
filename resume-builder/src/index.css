@@ -29,7 +29,10 @@ body {
 .grid-container{
   display: grid;
   grid-template-columns: 40% 60%;
+  grid-template-rows: 15% 20% 15% 25% 25%;
 }
+
+
 
 @layer components{
   .navBtn{
